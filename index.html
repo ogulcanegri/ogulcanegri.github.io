@@ -34,6 +34,68 @@
         svg{
           color: fff !important;
         }
+        .faq-container{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 12em;
+    }
+    details{
+      font-size: 1rem;
+      margin: 0 auto;
+      width: 100%;
+      background: #131313;
+      border-radius: 8px;
+      position: relative;
+      max-width: 600px;
+      border: 2px solid #fff;
+      transition: 0.3s  ease-in-out;
+    }
+    details:hover{
+      border: 2px solid #fff;
+    }
+    summary{
+      user-select: none;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      list-style: none;
+      padding: 1em;
+      align-items: center;
+    }
+    summary:hover .faq-title{
+      opacity: 1;
+    }
+    summary::-webkit-details-marker{
+      display: none;
+    }
+    summary:focus{
+      outline: none;
+    }
+    summary:hover .expand-icon{
+      opacity: 1;
+    }
+    .faq-title{
+      color: #f1f1f1;
+      width: 98%;
+      opacity: 0.65;
+      transition: all 250ms ease-in-out;
+    }
+    .faq-content{
+      color: #ffffff;
+      padding: 0.2em 1em 1em 1em;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+    .expand-icon{
+      opacity: 0.65;
+    }
+    .expand-icon{
+      pointer-events: none;
+      position: absolute;
+      right: 1em;
+      transition: all 150ms ease-out;
+    }
     }
 }
     .container {
@@ -179,6 +241,68 @@
         opacity: 0;
       }
     }
+    .faq-container{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 1em;
+    }
+    details{
+      font-size: 1rem;
+      margin: 0 auto;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 8px;
+      position: relative;
+      max-width: 600px;
+      border: 2px solid #131313;
+      transition: 0.3s  ease-in-out;
+    }
+    details:hover{
+      border: 2px solid #131313;
+    }
+    summary{
+      user-select: none;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      list-style: none;
+      padding: 1em;
+      align-items: center;
+    }
+    summary:hover .faq-title{
+      opacity: 1;
+    }
+    summary::-webkit-details-marker{
+      display: none;
+    }
+    summary:focus{
+      outline: none;
+    }
+    summary:hover .expand-icon{
+      opacity: 1;
+    }
+    .faq-title{
+      color: #000000;
+      width: 98%;
+      opacity: 0.65;
+      transition: all 250ms ease-in-out;
+    }
+    .faq-content{
+      color: #000000;
+      padding: 0.2em 1em 1em 1em;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+    .expand-icon{
+      opacity: 0.65;
+    }
+    .expand-icon{
+      pointer-events: none;
+      position: absolute;
+      right: 1em;
+      transition: all 150ms ease-out;
+    }
   </style>
 </head>
 <body>
@@ -221,6 +345,19 @@
         <div class="circle"></div>
         <div class="text"></div>
       </div>
+      <span class="faq-container">
+        <details>
+          <summary>
+            <span class="faq-title">
+              Languages ​​I Know
+            </span>
+            <img src="images/plus.png" width="20px" class="expand-icon">
+          </summary>
+          <div class="faq-content">
+            Html, Css, Js, Php, C#
+          </div>
+        </details>
+      </span>
       <hr>
       <p>2023 - 2024 All Legal Rights Reserved</p>
       <a class="social_media" href="https://instagram.com/ou2lcan">İnstagram</a>
