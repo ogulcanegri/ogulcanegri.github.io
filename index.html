@@ -370,6 +370,7 @@
       fetch('https://api.lanyard.rest/v1/users/1174607470321225738')
       .then(response => response.json())
       .then(data => {
+        var codeactivity = response.data.activities.forEach((activity)=>{console.log})
         var text = document.querySelector(".text");
         var username = data["data"]["discord_user"]["username"];
         text.innerHTML = username;
