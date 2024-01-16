@@ -30,84 +30,6 @@
         color: #fff;
         font-family: "IBM Plex Sans", sans-serif;
       }
-      @media (prefers-color-scheme: light) {
-        body {
-          background-color: #fff;
-          color: #000;
-        }
-        a {
-          color: #131313 !important;
-        }
-        .box {
-          background-color: #fff !important;
-          border: 2px solid #131313 !important;
-          svg {
-            color: fff !important;
-          }
-          .faq-container {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 12em;
-          }
-          details {
-            font-size: 1rem;
-            margin: 0 auto;
-            width: 100%;
-            background: #ffffff;
-            border-radius: 8px;
-            position: relative;
-            max-width: 600px;
-            border: 2px solid #131313;
-            transition: 0.3s ease-in-out;
-          }
-          details:hover {
-            border: 2px solid #131313;
-          }
-          summary {
-            user-select: none;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            list-style: none;
-            padding: 1em;
-            align-items: center;
-          }
-          summary:hover .faq-title {
-            opacity: 1;
-          }
-          summary::-webkit-details-marker {
-            display: none;
-          }
-          summary:focus {
-            outline: none;
-          }
-          summary:hover .expand-icon {
-            opacity: 1;
-          }
-          .faq-title {
-            color: #f1f1f1;
-            width: 98%;
-            opacity: 0.65;
-            transition: all 250ms ease-in-out;
-          }
-          .faq-content {
-            color: #ffffff;
-            padding: 0.2em 1em 1em 1em;
-            font-weight: 300;
-            line-height: 1.5;
-          }
-          .expand-icon {
-            opacity: 0.65;
-          }
-          .expand-icon {
-            pointer-events: none;
-            position: absolute;
-            right: 1em;
-            transition: all 150ms ease-out;
-          }
-        }
-      }
       .container {
         max-width: 500px;
         margin: 0 auto;
@@ -129,30 +51,80 @@
       .sc_media {
         margin-right: 20px;
       }
+
       .box {
-        width: 300px;
-        height: 80px;
+        display: flex;
+        align-items: center;
+        width: 260px;
+        height: 40px;
         background-color: #131313;
         border: 1px solid #ffffff4a;
         border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
         position: relative;
-        opacity: 50;
       }
+
       .box img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         border-radius: 8px;
       }
+
       .box .text {
         position: absolute;
-        left: 120px;
+        left: 100px;
         top: 50%;
         transform: translateY(-50%);
         font-size: 20px;
         font-weight: bold;
+      }
+
+      .box .circle {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: gray;
+        animation: blink 1s infinite;
+        opacity: 50%;
+      }
+      .activity-box {
+        display: flex;
+        align-items: center;
+        width: 260px;
+        height: 40px;
+        background-color: #131313;
+        border: 1px solid #ffffff4a;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
+      }
+
+      .activity-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+      }
+
+      .activity-details {
+        flex: 1;
+        margin-left: 10px;
+        text-align: left;
+      }
+
+      .activity-details h2 {
+        font-size: 15px;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      #activity-details {
+        font-size: 14px;
+        color: #fff;
       }
       @media (max-width: 431px) {
         .container .box {
@@ -173,30 +145,78 @@
           padding: 20px;
         }
         .box {
-          width: 150px;
-          height: 80px;
-          background-color: #131313;
-          border: 1px solid #ffffff4a;
-          border-radius: 10px;
-          position: relative;
-          opacity: 50;
-        }
-        .box img {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 80px;
-          height: 80px;
-          border-radius: 8px;
-        }
-        .box .text {
-          position: absolute;
-          left: 120px;
-          top: 50%;
-          transform: translateY(-50%);
-          font-size: 20px;
-          font-weight: bold;
-        }
+          display: flex;
+        align-items: center;
+        width: 260px;
+        height: 40px;
+        background-color: #131313;
+        border: 1px solid #ffffff4a;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
+      }
+
+      .box img {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+      }
+
+      .box .text {
+        position: absolute;
+        left: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .box .circle {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: gray;
+        animation: blink 1s infinite;
+        opacity: 50%;
+      }
+      .activity-box {
+        display: flex;
+        align-items: center;
+        width: 260px;
+        height: 40px;
+        background-color: #131313;
+        border: 1px solid #ffffff4a;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
+      }
+
+      .activity-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+      }
+
+      .activity-details {
+        flex: 1;
+        margin-left: 10px;
+        text-align: left;
+      }
+
+      .activity-details h2 {
+        font-size: 15px;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      #activity-details {
+        font-size: 14px;
+        color: #fff;
+      }
       }
       .social_media {
         text-decoration: none;
@@ -344,7 +364,6 @@
           such as mobile app development, web programming, and desktop
           application development.
         </p>
-        <!-- Devam eden metin buraya eklenebilir -->
         <p>
           My enthusiasm for the world of software drives me to explore different
           technologies and improve myself every day. While building robust
@@ -363,7 +382,6 @@
           the software world, I am motivated to learn new things with each
           project and put my knowledge into practice.
         </p>
-        <!-- Devam eden metin buraya eklenebilir -->
         <p>
           Working with me means collaborating with not just a software
           developer, but also someone who brings a passion for technology and an
@@ -371,11 +389,17 @@
           contribute to the world of software by exploring more technologies and
           gaining more experience in the days to come.
         </p>
-        <!-- Devam eden metin buraya eklenebilir -->
         <div class="box">
           <img class="avatar" src="" alt="avatar" />
           <div class="circle"></div>
           <div class="text"></div>
+        </div>
+        <div class="activity-box">
+          <img class="activity-logo" src="" alt="activity-logo" />
+          <div class="activity-details">
+            <h2 id="activity-project-name"></h2>
+            <p id="activity-details"></p>
+          </div>
         </div>
         <span class="faq-container">
           <details>
@@ -447,5 +471,64 @@
         clickSound.play();
       }
     </script>
+<script>
+  setInterval(() => {
+    fetch("https://api.lanyard.rest/v1/users/1174607470321225738")
+      .then((response) => response.json())
+      .then((data) => {
+        let vscLogo;
+        let vscProjectName;
+        let vscDetail;
+
+        data.data.activities.forEach((activity) => {
+          if (
+            activity.name === "Visual Studio Code" ||
+            activity.name === "Code"
+          ) {
+            vscLogo = `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png`;
+            vscProjectName = activity.state;
+            vscDetail = activity.details;
+
+            // Display the activity status in the new div
+            var activityLogo = document.querySelector(".activity-logo");
+            var activityProjectName = document.getElementById(
+              "activity-project-name"
+            );
+            var activityDetails = document.getElementById("activity-details");
+
+            activityLogo.src = vscLogo;
+            activityProjectName.innerHTML = vscProjectName;
+            activityDetails.innerHTML = vscDetail;
+
+            // Show the activity-box
+            document.querySelector(".activity-box").style.display = "flex";
+          }
+        });
+
+        // Check if VSC is not open and there is no change in the Discord account
+        if (!vscLogo && !vscProjectName && !vscDetail) {
+          // Hide the activity-box
+          document.querySelector(".activity-box").style.display = "none";
+        }
+
+        // Other code for updating username, avatar, and status circle
+        var text = document.querySelector(".text");
+        var username = data["data"]["discord_user"]["username"];
+        text.innerHTML = username;
+        var avatar = document.querySelector(".avatar");
+        var imageUrl = data["data"]["discord_user"]["avatar"];
+        avatar.src = `https://cdn.discordapp.com/avatars/${data["data"]["discord_user"]["id"]}/${imageUrl}.png`;
+        var active_on_desktop = data["data"]["active_on_discord_desktop"];
+        var active_on_mobile = data["data"]["active_on_discord_mobile"];
+        var active_on_web = data["data"]["active_on_discord_web"];
+        var circle = document.querySelector(".circle");
+        if (active_on_desktop || active_on_mobile || active_on_web) {
+          circle.style.backgroundColor = "green";
+        } else {
+          circle.style.backgroundColor = "gray";
+        }
+      });
+  }, 500);
+</script>
   </body>
 </html>
