@@ -1,1 +1,0 @@
-Yeni Haritalar: "Ölümcül Orman" ve "Çelik Çöl" | Oyun İçi Sohbet Sistemi eklendi. | Performans ve hata düzeltmeleri yapıldı. | Multiplayer sistemi geliştirildi
