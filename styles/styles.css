@@ -86,6 +86,17 @@ body {
     color: white;
     text-decoration: none;
 }
+.circle-transparent{
+    position: absolute;
+    right: 37px;
+    top: 125px;
+    transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: #5c5b5a;
+    border: 1px solid black;
+}
 .circle {
     position: absolute;
     right: 38px;
