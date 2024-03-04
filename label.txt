@@ -1,1 +1,1 @@
-
+SJ Studio will now run on older operating systems
