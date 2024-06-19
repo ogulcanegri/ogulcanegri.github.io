@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Preahvihear&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
       body {
         display: flex;
         flex-direction: column;
@@ -28,7 +28,7 @@
         margin: 0;
         background-color: #131313;
         color: #fff;
-        font-family: "IBM Plex Sans", sans-serif;
+        font-family: "Rubik", sans-serif;
       }
       .container {
         max-width: 500px;
@@ -63,6 +63,7 @@
         margin-top: 20px;
         padding: 20px;
         position: relative;
+        font-size: 14px;
       }
 
       .box img {
@@ -330,25 +331,74 @@
         right: 1em;
         transition: all 150ms ease-out;
       }
+      /* CSS for the loader */
+/* Loader ekranı */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #131313;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #fff;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.loaded #progress-bar {
+  opacity: 0;
+}
+.social_media {
+  text-decoration: none;
+  color: gray;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.social_media:hover {
+  color: #fff;
+}
+
     </style>
   </head>
   <body>
+    <!-- Loader ekranı -->
+<div id="loader">
+  <div class="loader"></div>
+</div>
+
     <audio id="clickSound" src="click.wav"></audio>
     <div id="content">
       <div id="progress-bar"></div>
 
       <div class="container">
-        <br />
-        <br />
-        <br />
-        <br />
-        <a href="index.html" class onclick="playClickSound()"
-          ><i class="fa fa-home" style="font-size: 30px"></i
-        ></a>
-        <a href="contact/index.html" onclick="playClickSound()"
-          ><i class="fa fa-comment" style="font-size: 28px"></i
-        ></a>
-        <br />
         <br />
         <br />
         <br />
@@ -408,17 +458,11 @@
           </details>
         </span>
         <hr />
-        <p>2023 - 2024 All Legal Rights Reserved</p>
-        <a class="social_media" href="https://instagram.com/ou2lcan"
-          >İnstagram</a
-        >
-        <a class="social_media" href="mailto:oejan@post.com">E-Mail</a>
-      </div>
     </div>
 
     <script>
       setInterval(() => {
-        fetch("https://api.lanyard.rest/v1/users/1174607470321225738")
+        fetch("https://api.lanyard.rest/v1/users/1213396953476497439")
           .then((response) => response.json())
           .then((data) => {
             let vscLogo;
@@ -470,7 +514,7 @@
     </script>
 <script>
   setInterval(() => {
-    fetch("https://api.lanyard.rest/v1/users/1174607470321225738")
+    fetch("https://api.lanyard.rest/v1/users/1213396953476497439")
       .then((response) => response.json())
       .then((data) => {
         let vscLogo;
@@ -527,5 +571,18 @@
       });
   }, 500);
 </script>
+<!-- JavaScript loader kontrolü -->
+<script>
+  // Sayfa yüklendiğinde çalışacak fonksiyon
+  window.addEventListener("load", function () {
+    var loader = document.getElementById("loader");
+    // 3 saniye sonra loader ekranını gizle
+    setTimeout(function() {
+      loader.style.display = "none";
+      document.body.classList.add("loaded");
+    }, 3000); // 3 saniye sonra loader gizlenecek
+  });
+</script>
+
   </body>
 </html>
